@@ -1,10 +1,8 @@
-
 #' A function for input validation
 #'
 #' @param obj The object that undergoes validation
 #' @param argument_name A string indicating the name of the object
 #'   This name is used when an error is thrown so the user
-#'   is informed on the cause of the error.
 #' @param class_string A character vector of legal classes. If
 #'   \code{class_string} is "numeric", it will be expanded to
 #'   c("numeric", "integer", "double"). The class is tested via the
@@ -30,6 +28,7 @@
 #' @author Martin Papenberg \email{martin.papenberg@@hhu.de}
 #'
 #' @noRd
+
 validate_input <- function(obj, argument_name, class_string = NULL, len = NULL,
                            gt0 = FALSE, groupsize = NULL, input_set = NULL) {
 

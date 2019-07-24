@@ -92,4 +92,3 @@ generate_shifted_axis <- function(limits, steps, other_ax_steps, axis,
   return(tick_frame)
 }
 
-test <- generate_shifted_axis(c(-200, 1100), 200, 1, "x")
