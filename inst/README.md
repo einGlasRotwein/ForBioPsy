@@ -19,7 +19,7 @@ av_chicks %>%
   chick_theme
 ```
 
-![](https://github.com/einGlasRotwein/ForBioPsy/tree/master/inst/Examples/pics/chickplot.png)
+![](https://github.com/einGlasRotwein/ForBioPsy/blob/master/inst/Examples/pics/chickplot.png)
 
 ```R
 # Generate an auxiliary x-axis
@@ -52,4 +52,4 @@ av_chicks %>%
                aes(x = ticks, y = intercept - tick_sz * .5,
                    xend = ticks, yend = intercept + tick_sz * .5))
 ```
-![](https://github.com/einGlasRotwein/ForBioPsy/tree/master/inst/Examples/pics/chickplot_aux_x.png)
+![](https://github.com/einGlasRotwein/ForBioPsy/blob/master/inst/Examples/pics/chickplot_aux_x.png)
