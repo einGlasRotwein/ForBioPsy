@@ -1,8 +1,7 @@
 # Helper functions for automated file administration and data wrangling
 This package accompanies the scripts I wrote for easier file management and
 wrangling of EEG data files. It is taylored to the needs of the BioPsy 
-group, but maybe some of the functions might be helpful on their own. See 
-current development and to do in the [Documentation](https://github.com/einGlasRotwein/ForBioPsy/tree/master/Documentation/README.md)
+group, but maybe some of the functions might be helpful on their own. See a list of functions, current development and to do in the [Documentation](https://github.com/einGlasRotwein/ForBioPsy/tree/master/inst/README.md).
 
 ## Getting started
 You can install this package by running the following code in your console:
