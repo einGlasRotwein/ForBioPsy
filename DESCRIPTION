@@ -1,0 +1,13 @@
+Package: ForBioPsy
+Title: File Administration and Data Preprocessing for the BioPsy group
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Juli",
+           family = "Tkotz",
+           role = c("aut", "cre"),
+           email = "juliane.tkotz@gmail.com")
+Description: Various helper functions for file administration and EEG data file
+             management and preparation.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
