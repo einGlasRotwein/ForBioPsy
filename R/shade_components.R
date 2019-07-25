@@ -80,8 +80,8 @@
 shade_components <- function(components, durations) {
   validate_input(components, "components", "character")
   validate_input(durations, "durations", "character")
-  if (any(!grepl("[0-9] ?- ?[0-9]", durations))) {
-    culprits <- durations[!grepl("[0-9] ?- ?[0-9]", durations)]
+  if (any(!grepl("^[0-9]*\\s*[-]\\s*[0-9]*$", durations))) {
+    culprits <- durations[!grepl("^[0-9]*\\s*[-]\\s*[0-9]*$", durations)]
     stop("Whoops. The following durations are not in the correct format: ",
          paste(culprits, collapse = ", "))
   }
