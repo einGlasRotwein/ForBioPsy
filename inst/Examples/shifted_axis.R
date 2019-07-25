@@ -21,9 +21,8 @@ av_chicks <- ChickWeight %>%
   summarise(weight = mean(weight))
 
 # A simple Plot tracking the chicks' weight over time between diets
-av_chicks %>%
-  ggplot(aes(x = Time, y = weight)) +
-  geom_line(aes(colour = Diet)) +
+ggplot() +
+  geom_line(data = av_chicks, aes(x = Time, y = weight, colour = Diet)) +
   chick_theme
 
 # Let's add auxiliary axes at Time = 10 and weight = 150 for absolutely no
@@ -51,9 +50,8 @@ x_ticks <- generate_shifted_axis(
 # in geom_line, because if already passed in ggplot(), ggplot2 will try and
 # apply the grouping variable to our newly added geoms, which won't work.
 
-av_chicks %>%
-  ggplot(aes(x = Time, y = weight)) +
-  geom_line(aes(colour = Diet)) +
+ggplot() +
+  geom_line(data = av_chicks, aes(x = Time, y = weight, colour = Diet)) +
   chick_theme +
   geom_hline(yintercept = 150) +
   geom_segment(data = x_ticks,
@@ -78,9 +76,8 @@ y_ticks <- generate_shifted_axis(
 # xend = intercept + tick_sz * .5, yend = ticks))
 
 # We do as it tells us:
-av_chicks %>%
-  ggplot(aes(x = Time, y = weight)) +
-  geom_line(aes(colour = Diet)) +
+ggplot() +
+  geom_line(data = av_chicks, aes(x = Time, y = weight, colour = Diet)) +
   chick_theme +
   geom_hline(yintercept = 150) +
   geom_segment(data = x_ticks,

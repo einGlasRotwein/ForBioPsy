@@ -34,7 +34,8 @@
 #'
 #'          Note that the axis text is not shifted, but stays with the actual
 #'          axis, because the function is optimised for readable EEG plots. See
-#'          package description on GitHub.
+#'          \href{https://github.com/einGlasRotwein/ForBioPsy/tree/master/inst}{examples}
+#'          on GitHub.
 #'
 #'          As the ticks are in fact plotted with x and y coordinates, the tick
 #'          size is computed relative to the size of the steps you auxiliary
@@ -51,11 +52,14 @@
 #'
 #' @examples
 #'
-#' x_ticks <- generate_shifted_axis(c(-200, 1100), 200, 1, "x")
+#' x_ticks <- generate_shifted_axis(
+#'   c(-200, 1100), 200, 1, "x"
+#'   )
 #'
 #' @author Juliane Tkotz \email{juliane.tkotz@@hhu.de}
 #' @export
 #'
+
 generate_shifted_axis <- function(limits, steps, other_ax_steps, axis,
                                   tick_sz = .7, intercept = 0) {
   validate_input(limits, "limits", "numeric", 2)
