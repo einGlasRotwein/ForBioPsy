@@ -87,9 +87,15 @@ validate_input <- function(obj, argument_name, class_string = NULL, len = NULL,
 
   ## - Check if argument matches a predefined input set
   if (argument_exists(input_set)) {
-    if (!obj %in% input_set) {
-      stop(argument_name, " can either be set to '",
-           paste(input_set, collapse = "' or '"), "'")
+    if (argument_exists(len)){
+      if (len == 1 && (!obj %in% input_set)) {
+        stop(argument_name, " can either be set to one of '",
+             paste(input_set, collapse = "' or '"), "'")
+      }
+    }
+    if (any(!obj %in% input_set)) {
+      stop(argument_name, " can only be set to one or more values of the following set: '",
+           paste(input_set, collapse = "' , '"), "'")
     }
   }
 
@@ -114,11 +120,6 @@ self_validation <- function(argument_name, class_string, len, gt0, groupsize,
   if (argument_exists(groupsize)) {
     stopifnot(mode(groupsize) == "numeric")
     stopifnot(length(groupsize) == 1)
-  }
-
-  if (argument_exists(input_set) && len != 1) {
-    stop("If an input set is passed, argument len must be 1 ",
-         "(this message should not be seen by users of the package staRbugs).")
   }
 
   return(invisible(NULL))
