@@ -1,0 +1,2 @@
+Sampling rate: 1000Hz, SamplingInterval: 1ms
+Type, Description, Position, Length, Channel
