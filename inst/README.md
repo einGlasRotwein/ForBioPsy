@@ -2,6 +2,10 @@
 Find current issues and a to do in this README. See current changes in the [NEWS
 file](https://github.com/einGlasRotwein/ForBioPsy/tree/master/inst/NEWS.md). Even though this package is primarily designed to match the needs of EEG data analysis, all my examples use the not-so-EEG [chick weight data set](https://www.rdocumentation.org/packages/datasets/versions/3.6.1/topics/ChickWeight), because that's easier to reproduce. But hey. Brain waves. Chick weights. What's the difference, really?
 
+## File Administration
+### delete_empty_BA_files()
+Meant to delete empty or pseudo-empty export files exported from the [Brain Vision Analyzer](https://www.brainproducts.com/downloads.php?kid=9), but can in principle be used for any .txt, .dat or .csv files that (are supposed to) contain data tables. Will go through a given folder and delete files that are empty/blank or contain nothing but a header. See possible specifications - and the function in full action - in the [example folder](https://github.com/einGlasRotwein/ForBioPsy/tree/master/inst/Examples), where dummy files are provided as well.
+
 ## Plotting Functions
 ### shade_components()
 Generate a dataframe and the lines of code to add to `ggplot()` in order to shade the areas of your plot representing components. The main output of the function is a dataframe that contains all the information needed to shade the areas of your EEG components. Simultaneously, `shade_components()` will print the code you need to add to your plot to insert your newly created component shading. Note that you need to replace `'YOURDF'` with the name of the object you saved the function's output to. Make sure you add `geom_rect()` before your other `geoms` so the shading lies below the data you're plotting. Don't forget to add `+` before and/or after the additional lines if needed. Also note that a specific order of `geoms` in your plot may be required, as well as certain requirements how to pass your data to `ggplot()`. See [examples](https://github.com/einGlasRotwein/ForBioPsy/tree/master/inst/Examples/shade_components.R) for clarification.
