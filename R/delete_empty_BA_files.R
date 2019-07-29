@@ -21,6 +21,9 @@
 #'                         should be deleted or if additionally, files that just
 #'                         contain column names (but no additional data) should
 #'                         be deleted as well. Defaults to \code{FALSE}.
+#' @param ... Additional arguments passed to \code{read.table()}, which is
+#'            called to check if files contain empty lines. Might lead to
+#'            unexpected results.
 #'
 #' @details Originally, \code{delete_empty_BA_files()} is designed to clean up
 #'          data exported from the
@@ -52,9 +55,9 @@
 #'          argument \code{skip}.
 #'
 #'          Examples without any example files aren't of much use here, so head
-#'          to the
-#'          \href{https://github.com/einGlasRotwein/ForBioPsy/tree/master/news%20and%20examples}{example folder on GitHub}
-#'          to see the function in action.
+#'          to the example folder on
+#'          \href{https://github.com/einGlasRotwein/ForBioPsy}{GitHub} to see
+#'          the function in action.
 #'
 #' @author Juliane Tkotz \email{juliane.tkotz@@hhu.de}
 #' @export
@@ -63,7 +66,7 @@
 delete_empty_BA_files <- function(filetype = c("txt", "csv", "dat"),
                                   folderpath = ".", header = TRUE, sep = "",
                                   skip = 0, row.names = NULL,
-                                  only_truly_empty = FALSE) {
+                                  only_truly_empty = FALSE, ...) {
   validate_input(folderpath, "folderpath", "character", 1)
   validate_input(filetype, "filetype", "character", input_set = c("txt", "csv", "dat"))
 
@@ -86,7 +89,7 @@ delete_empty_BA_files <- function(filetype = c("txt", "csv", "dat"),
       file_paths,
       function(x) {
         try_info <- try(read.table(x, skip = skip, header = header, sep = sep,
-                                   row.names = row.names), silent = TRUE)
+                                   row.names = row.names, ...), silent = TRUE)
         if (grepl("empty", try_info[1], fixed = TRUE) |
             grepl("no lines", try_info[1], fixed = TRUE)) {
           unlink(x)
@@ -105,7 +108,7 @@ delete_empty_BA_files <- function(filetype = c("txt", "csv", "dat"),
         function(x) {
           try_info <- try(
             cur_markerfile <- read.table(x, skip = skip, header = header,
-                                         sep = sep, row.names = row.names),
+                                         sep = sep, row.names = row.names, ...),
             silent = TRUE
             )
           if (grepl("did not have", try_info[1], fixed = TRUE)) {
