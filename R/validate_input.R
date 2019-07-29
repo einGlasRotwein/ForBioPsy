@@ -89,7 +89,7 @@ validate_input <- function(obj, argument_name, class_string = NULL, len = NULL,
   if (argument_exists(input_set)) {
     if (argument_exists(len)){
       if (len == 1 && (!obj %in% input_set)) {
-        stop(argument_name, " can either be set to one of '",
+        stop(argument_name, " can only be set to one of either '",
              paste(input_set, collapse = "' or '"), "'")
       }
     }
