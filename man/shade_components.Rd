@@ -27,9 +27,9 @@ The main output of the function is a dataframe that contains all the
          before and/or after the additional lines if needed. Also note that
          a specific order of \code{geoms} in your plot may be required, as
          well as certain requirements how to pass your data to
-         \code{ggplot()}. See
-         \href{https://github.com/einGlasRotwein/ForBioPsy/tree/master/inst/Examples/shade_components.R}{examples on GitHub})
-         for clarification.
+         \code{ggplot()}. See the example folder on
+         \href{https://github.com/einGlasRotwein/ForBioPsy}{GitHub} for
+         clarification.
 
          You provide the durations as a character vector, such as e.g.
          \code{c("400 - 500", "500 - 700")}. See examples.

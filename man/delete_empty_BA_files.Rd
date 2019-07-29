@@ -6,7 +6,7 @@
 \usage{
 delete_empty_BA_files(filetype = c("txt", "csv", "dat"),
   folderpath = ".", header = TRUE, sep = "", skip = 0,
-  row.names = NULL, only_truly_empty = FALSE)
+  row.names = NULL, only_truly_empty = FALSE, ...)
 }
 \arguments{
 \item{filetype}{A character vector specifying the file types that should be
@@ -35,6 +35,10 @@ skip. Defaults to 0.}
 should be deleted or if additionally, files that just
 contain column names (but no additional data) should
 be deleted as well. Defaults to \code{FALSE}.}
+
+\item{...}{Additional arguments passed to \code{read.table()}, which is
+called to check if files contain empty lines. Might lead to
+unexpected results.}
 }
 \description{
 Delete empty data and marker files
@@ -70,9 +74,9 @@ Originally, \code{delete_empty_BA_files()} is designed to clean up
          argument \code{skip}.
 
          Examples without any example files aren't of much use here, so head
-         to the
-         \href{https://github.com/einGlasRotwein/ForBioPsy/tree/master/inst/Examples}{example folder on GitHub}
-         to see the function in action.
+         to the example folder on
+         \href{https://github.com/einGlasRotwein/ForBioPsy}{GitHub} to see
+         the function in action.
 }
 \author{
 Juliane Tkotz \email{juliane.tkotz@hhu.de}

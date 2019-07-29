@@ -34,8 +34,8 @@
 #'
 #'          Note that the axis text is not shifted, but stays with the actual
 #'          axis, because the function is optimised for readable EEG plots. See
-#'          \href{https://github.com/einGlasRotwein/ForBioPsy/tree/master/news%20and%20examples}{examples}
-#'          on GitHub.
+#'          the example folder on
+#'          \href{https://github.com/einGlasRotwein/ForBioPsy}{GitHub}.
 #'
 #'          As the ticks are in fact plotted with x and y coordinates, the tick
 #'          size is computed relative to the size of the steps you auxiliary
