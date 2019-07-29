@@ -55,6 +55,7 @@ my_files <- c("LF00AP_data.txt", "JT13MP_data.txt", "MT99KD_data.txt",
 read_out_ID("XX00XX_", my_files)
 
 read_out_ID("XX00XX_", my_files, remove_ = FALSE)
+read_out_ID("XX00XX_", my_files, filenames = TRUE)
 
 }
 \author{

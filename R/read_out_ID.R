@@ -40,6 +40,7 @@
 #' read_out_ID("XX00XX_", my_files)
 #'
 #' read_out_ID("XX00XX_", my_files, remove_ = FALSE)
+#' read_out_ID("XX00XX_", my_files, filenames = TRUE)
 #'
 #' @author Juliane Tkotz \email{juliane.tkotz@@hhu.de}
 #' @export
