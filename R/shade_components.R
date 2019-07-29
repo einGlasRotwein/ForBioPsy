@@ -17,7 +17,7 @@
 #'          a specific order of \code{geoms} in your plot may be required, as
 #'          well as certain requirements how to pass your data to
 #'          \code{ggplot()}. See
-#'          \href{https://github.com/einGlasRotwein/ForBioPsy/tree/master/inst/Examples/shade_components.R}{examples on GitHub})
+#'          \href{https://github.com/einGlasRotwein/ForBioPsy/tree/master/news%20and%20examples/Examples/shade_components.R}{examples on GitHub})
 #'          for clarification.
 #'
 #'          You provide the durations as a character vector, such as e.g.

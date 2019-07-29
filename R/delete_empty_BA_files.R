@@ -53,7 +53,7 @@
 #'
 #'          Examples without any example files aren't of much use here, so head
 #'          to the
-#'          \href{https://github.com/einGlasRotwein/ForBioPsy/tree/master/inst/Examples}{example folder on GitHub}
+#'          \href{https://github.com/einGlasRotwein/ForBioPsy/tree/master/news%20and%20examples}{example folder on GitHub}
 #'          to see the function in action.
 #'
 #' @author Juliane Tkotz \email{juliane.tkotz@@hhu.de}
