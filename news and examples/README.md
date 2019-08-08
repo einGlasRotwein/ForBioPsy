@@ -7,7 +7,7 @@ file](https://github.com/einGlasRotwein/ForBioPsy/tree/master/news%20and%20examp
 Meant to delete empty or pseudo-empty export files exported from the [Brain Vision Analyzer](https://www.brainproducts.com/downloads.php?kid=9), but can in principle be used for any .txt, .dat or .csv files that (are supposed to) contain data tables. Will go through a given folder and delete files that are empty/blank or contain nothing but a header. See possible specifications - and the function in full action - in the [example folder](https://github.com/einGlasRotwein/ForBioPsy/tree/master/news%20and%20examples/Examples), where dummy files are provided as well.
 
 ### read_out_ID()
-Read out participant IDs of a specified format from filenames. Alternatively, it can give back the filenames that start with valid IDs in a given folder. See examples in the [example folder](https://github.com/einGlasRotwein/ForBioPsy/tree/master/news%20and%20examples/Examples)
+Read out participant IDs of a specified format from filenames. Alternatively, it can give back the filenames that start with valid IDs in a given folder. See examples in the [example folder](https://github.com/einGlasRotwein/ForBioPsy/tree/master/news%20and%20examples/Examples).
 
 ## Plotting Functions
 ### shade_components()
